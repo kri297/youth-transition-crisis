@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youth Transition Crisis - Aadhaar Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="container">
+            <h1>THE YOUTH TRANSITION CRISIS</h1>
+            <p class="subtitle">Unlocking Hidden Disparities in Aadhaar Youth Biometric Engagement</p>
+        </div>
+    </header>
+
+    <!-- Loading Screen -->
+    <div id="loading" class="loading">
+        <div class="spinner"></div>
+        <p>Loading data...</p>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <button class="nav-btn active" data-section="overview">Overview</button>
+            <button class="nav-btn" data-section="question">Research Question</button>
+            <button class="nav-btn" data-section="design">Research Design</button>
+            <button class="nav-btn" data-section="findings">Key Findings</button>
+            <button class="nav-btn" data-section="charts">All Figures</button>
+            <button class="nav-btn" data-section="recommendations">Recommendations</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Overview Section -->
+        <section id="overview" class="content-section active">
+            <div class="stats-grid" id="stats-grid">
+                <!-- Stats will be populated by JavaScript -->
+            </div>
+
+            <div class="alert-critical" id="critical-alert">
+                <!-- Alert will be populated by JavaScript -->
+            </div>
+
+            <div class="chart-container">
+                <h2>Top 15 States by Youth Biometric Engagement</h2>
+                <div id="chart-top15"></div>
+            </div>
+
+            <div class="chart-container">
+                <h2 id="gap-title">The Engagement Gap</h2>
+                <div id="chart-gap"></div>
+            </div>
+        </section>
+
+        <!-- Research Question Section -->
+        <section id="question" class="content-section">
+            <h2 class="section-header">Research Question</h2>
+            
+            <div class="card finding-card">
+                <h3>Core Question</h3>
+                <p class="large-text" id="research-question">
+                    <!-- Will be populated with gap ratio -->
+                </p>
+            </div>
+
+            <h3 class="sub-header">Context & Background</h3>
+            <div class="card white-card">
+                <p>
+                    India's Aadhaar system serves as the world's largest biometric digital identity platform, with over 
+                    <strong>1.3 billion enrolled citizens</strong>. For youth aged 5-17 years, periodic biometric updates are mandatory 
+                    as physical characteristics (fingerprints, iris patterns) change during growth and development.
+                </p>
+                <p>
+                    These updates are not merely administrative requirements—they are <strong>gateway credentials</strong> for:
+                </p>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-box blue">
+                    <h4>📚 Educational Access</h4>
+                    <ul>
+                        <li>School enrollment</li>
+                        <li>Scholarships</li>
+                        <li>Examination registration</li>
+                    </ul>
+                </div>
+                <div class="info-box green">
+                    <h4>💰 Financial Inclusion</h4>
+                    <ul>
+                        <li>Bank accounts</li>
+                        <li>Digital payments</li>
+                        <li>Government transfers</li>
+                    </ul>
+                </div>
+                <div class="info-box pink">
+                    <h4>🏥 Healthcare Services</h4>
+                    <ul>
+                        <li>Hospital registration</li>
+                        <li>Vaccination records</li>
+                        <li>Insurance claims</li>
+                    </ul>
+                </div>
+                <div class="info-box orange">
+                    <h4>🎯 Welfare Programs</h4>
+                    <ul>
+                        <li>Food subsidies</li>
+                        <li>Skill development</li>
+                        <li>Employment schemes</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Design Section -->
+        <section id="design" class="content-section">
+            <h2 class="section-header">Research Design</h2>
+            
+            <div class="card white-card">
+                <p>
+                    This study employs a <strong>quantitative, exploratory research design</strong> using secondary data analysis 
+                    with multi-dimensional statistical framework.
+                </p>
+            </div>
+
+            <h3 class="sub-header">Primary Metric Calculation</h3>
+            <div class="formula-box">
+                Youth Bio % = (bio_age_5_17 / (bio_age_5_17 + bio_age_17_)) × 100
+            </div>
+
+            <div class="card green-card">
+                <p>
+                    This metric represents the <strong>proportion of all biometric updates attributed to youth (ages 5-17)</strong>, 
+                    serving as the primary dependent variable for the entire analysis.
+                </p>
+            </div>
+
+            <h3 class="sub-header">Statistical Methods</h3>
+            <div class="card white-card">
+                <ul>
+                    <li><strong>Descriptive Statistics:</strong> Mean, median, standard deviation, range calculations</li>
+                    <li><strong>Comparative Analysis:</strong> Top vs bottom performer deep dives</li>
+                    <li><strong>Temporal Trends:</strong> Linear regression on monthly time-series data</li>
+                    <li><strong>Correlation Analysis:</strong> Pearson correlation coefficients</li>
+                    <li><strong>Risk Assessment:</strong> Five-tier classification framework</li>
+                    <li><strong>Predictive Modeling:</strong> Trend forecasting and early warning indicators</li>
+                </ul>
+            </div>
+
+            <h3 class="sub-header">Risk Categorization Framework</h3>
+            <div class="table-container">
+                <table class="risk-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Threshold</th>
+                            <th>Interpretation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="exemplary">
+                            <td>Exemplary</td>
+                            <td>≥ 60%</td>
+                            <td>Best practices, model states</td>
+                        </tr>
+                        <tr class="good">
+                            <td>Good</td>
+                            <td>50% - 60%</td>
+                            <td>Above average performance</td>
+                        </tr>
+                        <tr class="moderate">
+                            <td>Moderate</td>
+                            <td>45% - 50%</td>
+                            <td>Average performance</td>
+                        </tr>
+                        <tr class="at-risk">
+                            <td>At Risk</td>
+                            <td>40% - 45%</td>
+                            <td>Below average, monitor closely</td>
+                        </tr>
+                        <tr class="critical">
+                            <td>Critical</td>
+                            <td>&lt; 40%</td>
+                            <td>Urgent intervention required</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Key Findings Section -->
+        <section id="findings" class="content-section">
+            <h2 class="section-header">Key Findings</h2>
+            
+            <div class="chart-container">
+                <h3>Biometric vs Demographic Youth Engagement</h3>
+                <div id="chart-scatter"></div>
+            </div>
+
+            <div class="chart-container">
+                <h3>Monthly Youth Engagement Trends</h3>
+                <div id="chart-monthly"></div>
+            </div>
+
+            <div class="chart-container">
+                <h3>State Distribution by Risk Category</h3>
+                <div id="chart-risk"></div>
+            </div>
+        </section>
+
+        <!-- All Figures Section -->
+        <section id="charts" class="content-section">
+            <h2 class="section-header">All Figures</h2>
+            
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <h3>Figure 1: Youth Engagement Ladder</h3>
+                    <div id="chart-fig1"></div>
+                </div>
+
+                <div class="chart-container">
+                    <h3 id="fig2-title">Figure 2: The Engagement Gap</h3>
+                    <div id="chart-fig2"></div>
+                </div>
+
+                <div class="chart-container">
+                    <h3>Figure 3: Bio vs Demo Scatter</h3>
+                    <div id="chart-fig3"></div>
+                </div>
+
+                <div class="chart-container">
+                    <h3>Figure 4: Monthly Trends</h3>
+                    <div id="chart-fig4"></div>
+                </div>
+
+                <div class="chart-container">
+                    <h3>Figure 5: Risk Distribution</h3>
+                    <div id="chart-fig5"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations Section -->
+        <section id="recommendations" class="content-section">
+            <h2 class="section-header">Policy Recommendations</h2>
+            
+            <div class="card recommendation-card">
+                <h3>🎯 Immediate Actions Required</h3>
+                <ul>
+                    <li>Deploy mobile biometric units in Critical and At Risk states</li>
+                    <li>Establish state-level Youth Aadhaar Update Coordination Committees</li>
+                    <li>Launch targeted awareness campaigns in underperforming districts</li>
+                    <li>Integrate biometric update reminders with school enrollment systems</li>
+                </ul>
+            </div>
+
+            <div class="card recommendation-card">
+                <h3>📊 Long-term Strategies</h3>
+                <ul>
+                    <li>Create digital dashboards for real-time monitoring</li>
+                    <li>Implement incentive structures for high-performing states</li>
+                    <li>Develop predictive models for early intervention</li>
+                    <li>Establish quarterly review mechanisms with state governments</li>
+                </ul>
+            </div>
+
+            <div class="card recommendation-card">
+                <h3>🔍 Research Extensions</h3>
+                <ul>
+                    <li>Conduct qualitative studies in Critical states</li>
+                    <li>Analyze rural-urban disparities</li>
+                    <li>Study correlation with education outcomes</li>
+                    <li>Investigate socio-economic barriers</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>Youth Transition Crisis Analysis | Data Period: March 2025 - December 2025</p>
+            <p id="footer-date"></p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

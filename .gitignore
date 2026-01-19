@@ -1,0 +1,36 @@
+# Ignore Python virtual environment
+.venv/
+venv/
+env/
+
+# Ignore Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Ignore IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Ignore OS files
+.DS_Store
+Thumbs.db
+
+# Ignore zip files (data backups)
+*.zip
+
+# Ignore Word temp files
+~$*.docx
+
+# Ignore analysis outputs (if any)
+analysis_output/
+*.png
+
+# Keep data folders but ignore large CSVs if needed (optional)
+# biometric_data/*.csv
+# demographic_data/*.csv
+# enrolment_data/*.csv
