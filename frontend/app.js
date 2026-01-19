@@ -1,5 +1,5 @@
-// API Base URL - Change this when deploying to Render
-const API_BASE = 'http://localhost:5000/api';
+// API Base URL - Render deployment
+const API_BASE = 'https://youth-transition-crisis.onrender.com/api';
 
 // Global data storage
 let globalData = {};
